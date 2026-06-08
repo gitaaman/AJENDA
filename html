@@ -1,4 +1,97 @@
-kbcspvSDd029286078909*(%^#$@*{
-POIOHFUIhduireuihdioff
-9h9uuu973577865^$$&%&*^*y8gotjoinvndjmlnckvln woe47484973897764%&*$%G Y 9sichidde
-etgvirhdvcdv.vA)ks0iesjijT%^$@ksomxov v dkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+<!DOCTYPE html>
+<html>
+<head>
+<title>Girls Theme Calculator</title>
+<style>
+body{
+    background:#ffd6e7;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.calculator{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 15px pink;
+}
+#display{
+    width:100%;
+    height:50px;
+    font-size:22px;
+    text-align:right;
+    margin-bottom:10px;
+}
+button{
+    width:60px;
+    height:60px;
+    margin:4px;
+    border:none;
+    border-radius:50%;
+    background:#ff69b4;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+button:hover{
+    background:#ff1493;
+}
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" readonly>
+
+    <div>
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button onclick="add('/')">÷</button>
+    </div>
+
+    <div>
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button onclick="add('*')">×</button>
+    </div>
+
+    <div>
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button onclick="add('-')">-</button>
+    </div>
+
+    <div>
+        <button onclick="add('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="add('+')">+</button>
+    </div>
+</div>
+
+<script>
+function add(value){
+    document.getElementById("display").value += value;
+}
+
+function clearDisplay(){
+    document.getElementById("display").value = "";
+}
+
+function calculate(){
+    try{
+        document.getElementById("display").value =
+        eval(document.getElementById("display").value);
+    }catch{
+        alert("Invalid Input");
+    }
+}
+</script>
+
+</body>
+</html>
